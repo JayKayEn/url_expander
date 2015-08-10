@@ -1,0 +1,8 @@
+from django.db import models
+
+# Create your models here.                                                               
+class URLInfo(models.Model):
+    short_url = models.URLField()
+    dest_url = models.URLField()
+    status_code = models.PositiveSmallIntegerField()
+    page_title = models.CharField(max_length=200)

@@ -1,0 +1,26 @@
+{% load staticfiles %}
+
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>URL Expander</title>
+    </head>
+    <body>
+        <div class="page-header">
+        <a href="{% url 'url_new' %}" class="top-menu">{% bootstrap_icon "plus" %} Expand new url</a>
+        <h1><a href="/">URL Expander</a></h1>
+        </div>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
