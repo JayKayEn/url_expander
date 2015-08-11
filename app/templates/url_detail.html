@@ -5,11 +5,11 @@
         <h1>{{ url.short_url }}</h1>
         <p>
             expanded url : <a href="{{ url.expanded_url }}">{{ url.expanded_url }}</a><br />
-            status code : {{ url.status_code }}<br />
+            status code : {{ url.status_code }}{% if ok %}&nbsp;<i class="fa fa-check-circle fa-lg"></i>{% endif %}<br />
             page title : {{ url.page_title }}
         </p>
-        <form method="DELETE">
-            <button type="submit" formaction="{% url 'url_remove' pk=url.pk %}">Remove</button>
+        <form>
+            <button type="submit" class="btn btn-default" formaction="{% url 'url_remove' pk=url.pk %}">Remove</button>
         </form>
         <!-- <iframe sandbox src="{{ url.expanded_url }}" width="90%" height="400"></iframe> -->
     </div>

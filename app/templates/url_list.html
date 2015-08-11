@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 
 {% load bootstrap3 %}
 {% bootstrap_css %}
@@ -6,10 +7,10 @@
 {% block content %}
     {% for url in urls %}
     <div>
-        <h1>
+        <h2>
             <a href="{% url 'url_detail' pk=url.pk %}">{{ url.short_url }}</a>&nbsp;
-            <a href="{% url 'url_remove' pk=url.pk %}">{% bootstrap_icon "remove" %}</a>
-        </h1>
+            <a href="{% url 'url_remove' pk=url.pk %}" title="Delete this URL" class="remove-url">{% bootstrap_icon "remove" %}</a>
+        </h2>
     </div>
     {% endfor %}
 {% endblock content %}
