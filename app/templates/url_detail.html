@@ -5,7 +5,7 @@
         <h1>{{ url.short_url }}</h1>
         <p>
             expanded url : <a href="{{ url.expanded_url }}">{{ url.expanded_url }}</a><br />
-            status code : {{ url.status_code }}{% if ok %}&nbsp;<i class="fa fa-check-circle fa-lg"></i>{% endif %}<br />
+            status code : {{ url.status_code }}{% if ok %}&nbsp;<i class="fa fa-check-circle"></i>{% endif %}<br />
             page title : {{ url.page_title }}
         </p>
         <form>

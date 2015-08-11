@@ -1,4 +1,7 @@
-.fa-check-circle {
-    color: 'green';
+.fa.fa-check-circle {
+    color: green;
+}
 
+.fa.fa-plus-square {
+    color: deepskyblue;
 }
